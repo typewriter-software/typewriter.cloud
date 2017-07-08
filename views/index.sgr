@@ -1,0 +1,4 @@
+extends(src='layout.sgr')
+  block(name='content')
+    h1 {{ pages.home.title }}
+    h1 {{ pages.home.fields['hero-header'].value }}

@@ -1,0 +1,16 @@
+extends(src='layout.sgr')
+  block(name='content')
+    h1 data
+    pre {{ JSON.stringify(data) }}
+    h1 source
+    pre {{ source }}
+    h1 blog
+    pre {{ blog }}
+    h1 filename
+    pre {{ filename }}
+    h1 {{ pageId }}
+    h1 item
+    pre {{ JSON.stringify(item) }}
+    h1 locals
+    pre {{ JSON.stringify(locals) }}
+    p Lorem ipsum dolor sit amet, sem pellentesque, vulputate vestibulum, aliquam sapien elit lobortis nulla. Sit ac, ridiculus ut vel ut, erat faucibus amet nibh sem ipsum, dapibus vel magnis morbi sem, eu non vitae convallis. Quis libero dolor. Egestas praesent pede lorem nec, et commodo cras feugiat sed nec, risus elementum ligula viverra suspendisse, at mauris pede. Phasellus metus in, nunc nunc posuere curabitur amet ut.

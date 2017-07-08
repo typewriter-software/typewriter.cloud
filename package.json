@@ -1,0 +1,38 @@
+{
+  "name": "typewriter-cloud-cms",
+  "description": "The simplest way to deliver content to all of your apps and websites.",
+  "version": "0.0.1",
+  "author": "typewriter-software",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/typewriter-software/typewriter-cloud-cms/issues",
+  "dependencies": {
+    "reshape-standard": "^2.0.0",
+    "spike-css-standards": "^2.0.1",
+    "spike-js-standards": "^2.0.2",
+    "spike-page-id": "^1.0.0",
+    "webpack": "^3.0.0",
+    "spike": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "rimraf": "^2.6.1",
+    "snazzy": "^7.0.0",
+    "spike-records": "^1.0.2",
+    "standard": "^10.0.2"
+  },
+  "homepage": "https://github.com/typewriter-software/typewriter-cloud-cms",
+  "main": "app.js",
+  "private": true,
+  "repository": "https://github.com/typewriter-software/typewriter-cloud-cms",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "precommit": "npm run lint -s",
+    "pretest": "npm run lint -s",
+    "test": "NODE_ENV=test ava",
+    "start": "spike watch",
+    "build": "spike compile",
+    "prod": "NODE_ENV=production spike compile -e production"
+  }
+}
