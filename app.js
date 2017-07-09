@@ -44,7 +44,8 @@ module.exports = {
         url: 'https://api.typewriter.cloud/typewriter/typewriter-cloud/types/posts',
         template: {
           path: 'views/post.sgr',
-          output: (post) => { return `blog/${post.slug}.html` }
+          output: (post) => { return `blog/${post.slug}.html` },
+          transform: (data) => { return data }
         }
       }
     })

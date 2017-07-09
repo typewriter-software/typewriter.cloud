@@ -1,4 +1,31 @@
 extends(src='layout.sgr')
   block(name='content')
-    h1 {{ pages.home.title }}
-    h1 {{ pages.home.fields['hero-header'].value }}
+    .left
+      .branding
+        img(src="/img/typewriter-logo-darkborder.svg")
+        h1 Typewriter<br />Cloud CMS
+        a.button(href="https://app.typewriter.cloud/signup") Sign Up
+        a(href="https://app.typewriter.cloud/login") Login
+    .right
+      .contents
+        section
+          h2 {{ pages.home.fields['hero-header'].value }}
+          div {{ pages.home.fields['hero-body'].value }}
+        section
+          h2 {{ pages.home.fields['pricing-header'].value }}
+          .pricing
+            div {{ pages.home.fields['pricing-one'].value }}
+            div {{ pages.home.fields['pricing-two'].value }}
+            div {{ pages.home.fields['pricing-three'].value }}
+        section
+          h2 {{ pages.home.fields['api-header'].value }}
+          p API UI
+          div {{ pages.home.fields['github-info'].value }}
+    footer
+      ul
+        li: a(href="/documentation") Documentation
+        li: a(href="/contact") Contact
+      ul.small
+        li: a(href="/tos") Terms of Service
+        li: a(href="/privacy") Privacy Policy
+      p.small © {{ (new Date).getFullYear() }} Typewriter Software Inc.
