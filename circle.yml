@@ -1,6 +1,11 @@
 machine:
   node:
     version: 6
+dependencies:
+  post:
+    - aws configure set region us-east-1
+    - aws configure set preview.cloudfront true
+    - aws configure set preview.create-invalidation true
 # general: # This gets it only to run when specified branches are updated
 #   branches:
 #     only:
