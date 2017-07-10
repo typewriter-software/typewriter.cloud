@@ -1,3 +1,15 @@
 machine:
   node:
-    version: 6.1.0
+    version: 6
+deployment:
+  staging:
+    branch: master
+    commands:
+      - npm run build
+      - aws s3 sync --delete public/ s3://www.typewriter.cloud/
+  # production:
+  #   branch: production
+  #   commands:
+  #     - npm run compile
+  #     - aws s3 sync --delete www/ s3://example.com/
+  #     - aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"ABCDEFGHIJKLMNOP\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
