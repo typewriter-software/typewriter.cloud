@@ -1,12 +1,19 @@
 machine:
   node:
     version: 6
+# general: # This gets it only to run when specified branches are updated
+#   branches:
+#     only:
+#      - staging
+#      - production
 deployment:
   staging:
     branch: master
     commands:
       - npm run build
       - aws s3 sync --delete public/ s3://www.typewriter.cloud/
+      - aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"E381N3DV7FYJNF\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
+
   # production:
   #   branch: production
   #   commands:

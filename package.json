@@ -20,7 +20,7 @@
     "ava": "^0.19.1",
     "rimraf": "^2.6.1",
     "snazzy": "^7.0.0",
-    "spike-records": "^1.0.2",
+    "spike-records": "^1.0.3",
     "standard": "^10.0.2"
   },
   "homepage": "https://github.com/typewriter-software/typewriter-cloud-cms",
