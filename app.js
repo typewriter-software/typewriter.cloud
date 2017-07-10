@@ -27,12 +27,12 @@ module.exports = {
         url: 'https://api.typewriter.cloud/typewriter/typewriter-cloud/pages',
         transform: (data) => {
           // For easier template access, create lookup objects for pages and page fields
-          var pagesObject = {}
-          data.forEach(function(page) {
-            fieldsObject = {}
+          const pagesObject = {}
+          data.forEach(function (page) {
+            const fieldsObject = {}
             page.fields.forEach(function (field) {
               fieldsObject[field.slug] = field
-            });
+            })
             page.fields = fieldsObject
             pagesObject[page.slug] = page
           })
