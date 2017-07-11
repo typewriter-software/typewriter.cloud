@@ -7,9 +7,92 @@
   & .branding
     margin-top: 20vh
 
+    & img
+      margin-bottom: 20px
+
+    & h1
+      margin-bottom: 60px
+
+    & .signup
+      margin-bottom: 20px
+
 #index .right
   margin-left: var(--sidebarWidth)
 
   & .contents
     max-width: var(--contentMaxWidth)
     margin-top: 40px
+
+  & h2
+    margin-bottom: 30px
+
+  & section
+    margin-bottom: 80px
+
+#index .pricing
+  display: flex
+
+  & > div
+    max-width: 33.3333%
+    text-align: center
+    padding: 10px 14px
+
+  & .border
+    border-left: 1px solid var(--lightGray)
+    border-right: 1px solid var(--lightGray)
+
+  & p
+    font: 400 18px/20px var(--serif)
+
+#index .api
+  border: 1px solid var(--lightGray)
+  border-radius: var(--borderRadius)
+
+  & .tabs
+    border-bottom: 1px solid var(--lightGray)
+
+  & .tab
+    display: inline-block
+    padding: 12px 20px
+    border-right: 1px solid var(--lightGray)
+
+  & .contents
+    margin: 0
+    padding: 20px
+
+  & .contents.graphql
+    display: none
+
+  & .link
+    margin: 15px 0 25px 0
+
+    & *
+      display: inline-block
+
+    & a
+      color: var(--pinkish)
+      opacity: .5
+
+    & a.active
+      opacity: 1
+
+  & .data-container
+    border: 1px solid var(--lightGray)
+    border-radius: var(--borderRadius)
+    width: 100%
+    min-height: 200px
+    max-height: 400px
+
+#index .github-info
+  margin-left: 25px
+  & img
+    width: 30px
+
+  & p
+    font: 400 16px/18px var(--serif)
+    margin: 18px 0 0 10px
+    max-width: 175px
+    display: inline-block
+
+    & a
+      white-space: nowrap

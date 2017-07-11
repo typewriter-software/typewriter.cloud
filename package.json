@@ -33,7 +33,7 @@
     "pretest": "npm run lint -s",
     "test": "NODE_ENV=test ava",
     "start": "spike watch",
-    "build": "spike compile",
+    "build": "NODE_ENV=production spike compile -e production",
     "prod": "NODE_ENV=production spike compile -e production"
   }
 }
