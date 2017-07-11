@@ -1,5 +1,7 @@
 extends(src='layout.sgr')
   block(name='content')
+    .particles-container
+      #particles
     .left
       .branding
         img(src="/img/typewriter-logo-bg.svg")

@@ -8,6 +8,7 @@
   },
   "bugs": "https://github.com/typewriter-software/typewriter-cloud-cms/issues",
   "dependencies": {
+    "particles.js": "^2.0.0",
     "reshape-standard": "^2.0.0",
     "spike": "^2.0.0",
     "spike-core": "^2.0.0",
