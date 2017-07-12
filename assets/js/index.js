@@ -1,7 +1,9 @@
-const particles = require('./components/particles')
+import { initialize as initParticles } from './components/particles'
+import { initialize as initApiPlayground } from './components/apiPlayground'
 
 var _init = function () {
-  particles.initialize()
+  initParticles()
+  initApiPlayground()
 }
 
 document.addEventListener('DOMContentLoaded', _init, false)

@@ -41,6 +41,7 @@
 
 #index .right
   margin-left: var(--sidebarWidth)
+  padding-right: 10px
 
   & .contents
     max-width: var(--contentMaxWidth)
@@ -51,6 +52,13 @@
 
   & section
     margin-bottom: 80px
+
+#index section.screenshot-container
+  margin-bottom: 40px
+
+#index .screenshot
+  & img
+    width: 100%
 
 #index .pricing
   display: flex
@@ -72,19 +80,32 @@
   border-radius: var(--borderRadius)
 
   & .tabs
+    display: flex
     border-bottom: 1px solid var(--lightGray)
 
   & .tab
     display: inline-block
+    position: relative
     padding: 12px 20px
     border-right: 1px solid var(--lightGray)
 
+    &:after
+      content: ''
+      position: absolute auto auto -1px 0
+      height: 0
+      width: 100%
+      border-bottom: 1px solid transparent
+
+    &.active:after
+      border-bottom-color: #fff
+
   & .contents
+    display: none
     margin: 0
     padding: 20px
 
-  & .contents.graphql
-    display: none
+    &.active
+      display: block
 
   & .link
     margin: 15px 0 25px 0
@@ -99,23 +120,39 @@
     & a.active
       opacity: 1
 
+  & .query
+    margin: 15px 0 25px 0
+
+    & *
+      font: 400 12px/18px monospace
+      color: rgba(var(--pinkish), 0.5)
+      cursor: pointer
+
+      &.active
+        color: rgba(var(--pinkish), 1)
+
   & .data-container
     border: 1px solid var(--lightGray)
     border-radius: var(--borderRadius)
     width: 100%
     min-height: 200px
     max-height: 400px
+    font: 400 14px/18px monospace
+    background-color: #232323
 
 #index .github-info
-  margin-left: 25px
+  display: block
+  text-align: right
+  margin: 12px 25px 0
+
   & img
-    width: 30px
+    width: 20px
+    transform: translateY(3px)
 
   & p
-    font: 400 16px/18px var(--serif)
-    margin: 18px 0 0 10px
-    max-width: 175px
-    display: inline-block
+    font: 400 16px/20px var(--serif)
+    margin: 18px 0 0 8px
+    display: inline
 
     & a
       white-space: nowrap
