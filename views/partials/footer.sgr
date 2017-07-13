@@ -1,0 +1,10 @@
+footer
+  ul
+    li: a(href="/faq") FAQ
+    li: a(href="/api-docs") API Docs
+    li: a(href="mailto:contact@typewriter.cloud") Contact
+  .fine-print
+    ul
+      li: p © {{ (new Date).getFullYear() }} Typewriter Software Inc.
+      li: a(href="/terms-of-service") Terms of Service
+      li: a(href="/privacy-policy") Privacy Policy

@@ -27,9 +27,9 @@ extends(src='layout.sgr')
           h2 {{ pages.home.fields['api-header'].value }}
           .api
             .tabs
-              a.tab.rest(href="#", data-contents="rest") REST
-              a.tab.graphql.active(href="#", data-contents="graphql") GraphQL
-            .contents.rest
+              a.tab.rest.active(href="#", data-contents="rest") REST
+              a.tab.graphql(href="#", data-contents="graphql") GraphQL
+            .contents.rest.active
               .link
                 .base https://api.typewriter.cloud
                 .separator /
@@ -41,7 +41,7 @@ extends(src='layout.sgr')
                 .separator /
                 a.page(href="https://api.typewriter.cloud/typewriter/typewriter-cloud/pages/home", data-link="4") home
               pre.data-container
-            .contents.graphql.active
+            .contents.graphql
               .query
                 .line.q.active(data-query="1") query {
                 .line.q.active(data-query="1") &nbsp;&nbsp;projects(username: "typewriter"),
@@ -67,12 +67,4 @@ extends(src='layout.sgr')
             | {{ pages.home.fields['github-info'].value }}
         section.center
           a.button.signup(href="https://app.typewriter.cloud/signup") Sign Up For Free
-    footer
-      ul
-        li: a(href="/documentation") Documentation
-        li: a(href="mailto:contact@typewriter.cloud") Contact
-      .fine-print
-        ul
-          li: p © {{ (new Date).getFullYear() }} Typewriter Software Inc.
-          li: a(href="/tos") Terms of Service
-          li: a(href="/privacy") Privacy Policy
+    include(src="./partials/footer.sgr")

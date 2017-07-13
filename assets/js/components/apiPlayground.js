@@ -2,6 +2,10 @@ import { initialize as initRestPlayground } from './restPlayground'
 import { initialize as initGraphqlPlayground } from './graphqlPlayground'
 
 export function initialize () {
+  if (!document.querySelector('.api')) {
+    return false
+  }
+
   initRestPlayground()
   initGraphqlPlayground()
 

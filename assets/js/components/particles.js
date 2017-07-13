@@ -1,6 +1,9 @@
 require('particles.js')
 
 export function initialize () {
+  if (!document.getElementById('particles')) {
+    return false
+  }
   window.particlesJS('particles', {
     'particles': {
       'number': {

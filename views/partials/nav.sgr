@@ -1,0 +1,12 @@
+nav
+  .left
+    a.branding(href="/")
+      img(src="/img/typewriter-logo-bg.svg")
+      h1 Typewriter Cloud CMS
+  .right
+    ul
+      li: a(href="/faq") FAQ
+      li: a(href="/api-docs") API Docs
+      li: a(href="mailto:contact@typewriter.cloud") Contact
+      li: a(class="button signup" href="https://app.typewriter.cloud/signup") Try For Free
+      li: a(class="login" href="https://app.typewriter.cloud/login") Login

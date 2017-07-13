@@ -4,6 +4,11 @@ footer
   text-align: center
   padding: 20px
 
+  @media (max-width: 640px)
+    position: static
+    width: 100%
+    height: auto
+
   & li
     display: inline-block
     list-style-type: none
@@ -14,3 +19,8 @@ footer
 
     & *
       font: 400 12px/16px var(--sansSerif)
+
+.container footer
+  position: static
+  width: 100%
+  margin-top: 80px

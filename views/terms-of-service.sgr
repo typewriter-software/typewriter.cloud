@@ -1,0 +1,8 @@
+extends(src='layout.sgr')
+  block(name='content')
+    .container
+      include(src="./partials/nav.sgr")
+      section
+        h1 Typewriter Terms of Service
+        p Lorem ipsum dolor sit amet, sem pellentesque, vulputate vestibulum, aliquam sapien elit lobortis nulla. Sit ac, ridiculus ut vel ut, erat faucibus amet nibh sem ipsum, dapibus vel magnis morbi sem, eu non vitae convallis. Quis libero dolor. Egestas praesent pede lorem nec, et commodo cras feugiat sed nec, risus elementum ligula viverra suspendisse, at mauris pede. Phasellus metus in, nunc nunc posuere curabitur amet ut.
+      include(src="./partials/footer.sgr")
