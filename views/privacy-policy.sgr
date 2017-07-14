@@ -3,6 +3,6 @@ extends(src='layout.sgr')
     .container
       include(src="./partials/nav.sgr")
       section
-        h1 Typewriter Terms of Service
-        | {{ pages['terms-of-services'].fields['tos'].value }}
+        h1 Typewriter Privacy Policy
+        | {{ pages['privacy-policy'].fields['policy'].value }}
       include(src="./partials/footer.sgr")

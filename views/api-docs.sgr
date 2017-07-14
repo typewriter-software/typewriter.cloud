@@ -1,0 +1,128 @@
+extends(src='layout.sgr')
+  block(name='content')
+    .container
+      include(src="./partials/nav.sgr")
+      section
+        h2 API Documentation
+        p {{ pages['api-docs'].fields['intro-1'].value }}
+      section
+        h3 User
+        p {{ pages['api-docs'].fields['user-copy'].value }}
+
+        .query-container
+          h4 Get User
+          pre.rest https://api.typewriter.cloud/<span class="p">username</span>
+          br
+          pre.graphql
+            | query {
+            |   projects(username: "<span class="p">username</span>")
+            | }
+      section
+        h3 Pages
+        p {{ pages['api-docs'].fields['pages-copy'].value }}
+
+        .query-container
+          h4 Get all pages for a project
+          pre.rest https://api.typewriter.cloud/<span class="p">username</span>/<span class="p">project_slug</span>/pages
+          br
+          pre.graphql
+            | query {
+            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project_slug</span>") {
+            |     pages {
+            |       title,
+            |       slug,
+            |       fields {
+            |         type,
+            |         slug,
+            |         label,
+            |         value
+            |       }
+            |     }
+            |   }
+            | }
+
+        .query-container
+          h4 Get a specific page
+          pre.rest https://api.typewriter.cloud/<span class="p">username</span>/<span class="p">project_slug</span>/pages/<span class="p">page_slug</span>
+          br
+          pre.graphql
+            | query {
+            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project_slug</span>") {
+            |     pages {
+            |       title,
+            |       slug,
+            |       fields {
+            |         type,
+            |         slug,
+            |         label,
+            |         value
+            |       }
+            |     }
+            |   }
+            | }
+      section
+        h3 Types
+        p {{ pages['api-docs'].fields['types-copy'].value }}
+
+        .query-container
+          h4 Get all types for a project
+          pre.rest https://api.typewriter.cloud/<span class="p">username</span>/<span class="p">project_slug</span>/types
+          br
+          pre.graphql
+            | query {
+            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project</span>") {
+            |     types {
+            |       title,
+            |       slug,
+            |       fields {
+            |         type,
+            |         slug,
+            |         label,
+            |         value
+            |       }
+            |     }
+            |   }
+            | }
+
+        .query-container
+          h4 Get a specific type
+          pre.rest https://api.typewriter.cloud/<span class="p">username</span>/<span class="p">project_slug</span>/types/<span class="p">type_slug</span>
+          br
+          pre.graphql
+            | query {
+            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project</span>") {
+            |     types(type: "<span class="p">type_slug</span>") {
+            |       title,
+            |       slug,
+            |       fields {
+            |         type,
+            |         slug,
+            |         label,
+            |         value
+            |       }
+            |     }
+            |   }
+            | }
+
+        .query-container
+          h4 Get a specific type item
+          pre.rest https://api.typewriter.cloud/<span class="p">username</span>/<span class="p">project_slug</span>/types/<span class="p">type_slug</span>/<span class="p">item_slug</span>
+          br
+          pre.graphql
+            | query {
+            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project</span>") {
+            |     types(type: "<span class="p">type_slug</span>", item="<span class="p">item_slug</span>") {
+            |       title,
+            |       slug,
+            |       fields {
+            |         type,
+            |         slug,
+            |         label,
+            |         value
+            |       }
+            |     }
+            |   }
+            | }
+
+
+      include(src="./partials/footer.sgr")

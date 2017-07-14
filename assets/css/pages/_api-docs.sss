@@ -1,0 +1,40 @@
+#api-docs
+  & .p
+    color: var(--pinkish)
+    /*border: 1px solid var(--pinkish)
+    padding: 2px 4px
+    border-radius: var(--borderRadius)*/
+
+  & .query-container
+    display: inline-block
+    margin-bottom: 20px
+    width: 760px
+    border: 1px solid var(--lightGray)
+    border-radius: var(--borderRadius)
+    padding: 0 20px 20px
+
+  & .rest, & .graphql
+    position: relative
+    padding-left: 80px
+    display: inline-block
+
+    &:after
+      content: ''
+      font: 400 12px/18px var(--sansSerif)
+      position: absolute 0 0
+      width: 70px
+      height: 20px
+      text-align: center
+      color: var(--darkBlue)
+      border: 1px solid var(--darkBlue)
+      border-radius: var(--borderRadius)
+
+  & .rest
+    padding-bottom: 15px
+    margin-bottom: 15px
+
+    &:after
+      content: 'REST'
+
+  & .graphql:after
+    content: 'GraphQL'
