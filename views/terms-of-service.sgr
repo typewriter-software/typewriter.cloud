@@ -4,5 +4,5 @@ extends(src='layout.sgr')
       include(src="./partials/nav.sgr")
       section
         h1 Typewriter Terms of Service
-        | {{ pages['terms-of-services'].fields['tos'].value }}
+        | {{ pages['terms-of-service'].fields['tos'].value }}
       include(src="./partials/footer.sgr")
