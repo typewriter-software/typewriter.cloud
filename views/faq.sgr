@@ -6,11 +6,11 @@ extends(src='layout.sgr')
         h1 Frequently Asked Questions
         section
           h2 General
-          | {{ pages.faq.fields['general'].value }}
+          | {{{ pages.faq.fields['general'].value }}}
         section
           h2 Account & Billing
-          | {{ pages.faq.fields['account'].value }}
+          | {{{ pages.faq.fields['account'].value }}}
         section
           h2 User Interface
-          | {{ pages.faq.fields['user-interface'].value }}
+          | {{{ pages.faq.fields['user-interface'].value }}}
       include(src="./partials/footer.sgr")

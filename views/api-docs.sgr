@@ -70,7 +70,7 @@ extends(src='layout.sgr')
           br
           pre.graphql
             | query {
-            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project</span>") {
+            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project_slug</span>") {
             |     types {
             |       title,
             |       slug,
@@ -90,7 +90,7 @@ extends(src='layout.sgr')
           br
           pre.graphql
             | query {
-            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project</span>") {
+            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project_slug</span>") {
             |     types(type: "<span class="p">type_slug</span>") {
             |       title,
             |       slug,
@@ -110,7 +110,7 @@ extends(src='layout.sgr')
           br
           pre.graphql
             | query {
-            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project</span>") {
+            |   project(username: "<span class="p">username</span>", slug: "<span class="p">project_slug</span>") {
             |     types(type: "<span class="p">type_slug</span>", item="<span class="p">item_slug</span>") {
             |       title,
             |       slug,
