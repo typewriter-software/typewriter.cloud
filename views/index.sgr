@@ -13,7 +13,7 @@ extends(src='layout.sgr')
       .contents
         section.screenshot-container
           .screenshot
-            img(src="/img/screenshot5.jpg")
+            img(src="/img/screenshot.jpg")
         section
           h2 {{ pages.home.fields['hero-header'].value }}
           div {{ pages.home.fields['hero-body'].value }}
