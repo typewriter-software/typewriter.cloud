@@ -10,7 +10,8 @@ const locals = {}
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  ignore: ['**/layout.sgr', 'views/partials/*', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  cleanUrls: true,
   reshape: htmlStandards({
     root: './views',
     locals: (ctx) => Object.assign(locals, { pageId: pageId(ctx) }),
@@ -44,7 +45,7 @@ module.exports = {
         url: 'https://api.typewriter.cloud/typewriter/typewriter-cloud/types/posts',
         template: {
           path: 'views/post.sgr',
-          output: (post) => { return `blog/${post.slug}.html` },
+          output: (post) => { return `blog/${post.slug}/index.html` },
           transform: (data) => { return data }
         }
       }

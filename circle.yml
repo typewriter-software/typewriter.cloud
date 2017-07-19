@@ -15,7 +15,8 @@ deployment:
   staging:
     branch: master
     commands:
-      - npm run build
+      - export NODE_ENV=production
+      - npm run prod
       - aws s3 sync --delete public/ s3://www.typewriter.cloud/ --cache-control max-age=604800,public
       - aws cloudfront create-invalidation --cli-input-json "{\"DistributionId\":\"E381N3DV7FYJNF\",\"InvalidationBatch\":{\"Paths\":{\"Quantity\":1,\"Items\":[\"/*\"]},\"CallerReference\":\"$(date +%s)\"}}"
 
