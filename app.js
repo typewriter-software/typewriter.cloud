@@ -11,7 +11,6 @@ module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
   ignore: ['**/layout.sgr', 'views/partials/*', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
-  cleanUrls: true,
   reshape: htmlStandards({
     root: './views',
     locals: (ctx) => Object.assign(locals, { pageId: pageId(ctx) }),

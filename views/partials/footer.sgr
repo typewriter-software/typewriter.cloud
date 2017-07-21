@@ -5,6 +5,9 @@ footer
     li: a(href="mailto:contact@typewriter.cloud") Contact
   .fine-print
     ul
-      li: p © {{ (new Date).getFullYear() }} Typewriter Software Inc.
+      li
+        p
+          | © {{ (new Date).getFullYear() }}
+          a(href="https://www.typewriter.software")  Typewriter Software Inc.
       li: a(href="/terms-of-service") Terms of Service
       li: a(href="/privacy-policy") Privacy Policy
