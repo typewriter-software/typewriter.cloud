@@ -11,12 +11,29 @@ extends(src='layout.sgr')
         a.login(href="https://app.typewriter.cloud/login") Login
     .right
       .contents
-        section.screenshot-container
-          .screenshot
-            img(src="/img/screenshot.jpg")
         section
           h2 {{ pages.home.fields['hero-header'].value }}
           div {{ pages.home.fields['hero-body'].value }}
+        section.carousel-container
+          .carousel
+            .dot.first
+            .dot.second
+            .dot.third
+            .item(data-video="https://player.vimeo.com/video/231157575?autoplay=true")
+              .play-button
+              .bg(style="background-image: url(/img/screenshot.jpg)")
+          .carousel-pager
+            .item.thumbnail-item.active(data-video="https://player.vimeo.com/video/231157575?autoplay=true")
+              .thumbnail
+                .play-button
+                img(src="/img/screenshot-thumb-pages.jpg")
+              p Creating, Updating<br />and Deleting Pages
+            .item.thumbnail-item(data-video="https://player.vimeo.com/video/231157557?autoplay=true")
+              .thumbnail
+                .play-button
+                img(src="/img/screenshot-thumb-types.jpg")
+              p Creating and<br />Updating Types
+
         section
           h2 {{ pages.home.fields['pricing-header'].value }}
           .pricing

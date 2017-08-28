@@ -67,12 +67,129 @@
   & section
     margin-bottom: 80px
 
-#index section.screenshot-container
-  margin-bottom: 40px
+.play-button
+  position: absolute
+  height: 60px
+  width: 60px
+  top: 50%
+  left: 50%
+  border: 5px solid var(--darkBlueTransparent)
+  border-radius: 50%
+  z-index: 2
+  transform: translate(-50%, -50%)
 
-#index .screenshot
-  & img
+  &:after
+    content: ''
+    position: absolute
+    height: 0
+    width: 0
+    border-top: 14px solid transparent
+    border-bottom: 14px solid transparent
+    border-left: 18px solid var(--darkBlueTransparent)
+    top: 50%
+    left: 50%
+    transform: translate(-30%, -50%)
+
+
+#index .carousel
+  position: relative
+  height: auto
+  width: 100%
+  padding-bottom: 66.1%
+  margin-bottom: 16px
+  border: 3px solid var(--lightGray)
+  border-top-width: 20px
+  border-radius: 5px
+
+  & .dot
+    position: absolute
+    top: -14px
+    left: 5px
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background-color: white
+    border: 1px solid #eee
+
+    &.second
+      left: 18px
+
+    &.third
+      left: 31px
+
+  & .item
+    position: absolute
     width: 100%
+    height: 100%
+    padding-bottom: 66.1%
+    cursor: pointer
+
+    & .bg, & iframe
+      position: absolute
+      width: 100%
+      height: 100%
+
+    & .bg
+      background-size: cover
+      z-index: 1
+
+#index .carousel-pager
+  position: relative
+  width: 100%
+  height: 0
+  padding-bottom: 22.15%
+
+  @media (max-width: 640px)
+    height: 50vw
+
+  & .item
+    position: absolute
+    width: 50%
+    height: 100%
+    cursor: pointer
+
+    @media (max-width: 640px)
+      position: static
+      width: 100%
+
+    &:nth-child(2)
+      left: 50%
+
+    & .thumbnail
+      position: absolute
+      max-width: 150px
+
+    & .play-button
+      height: 42px
+      width: 42px
+      border-width: 4px
+
+      &:after
+        border-top-width: 10px
+        border-bottom-width: 10px
+        border-left-width: 15px
+
+    & img
+      max-width: 100%
+      height: auto
+      border: 3px solid #eee
+      border-radius: 5px
+
+    & p
+      display: inline-block
+      font: 14px/16px var(--sansSerif)
+      padding-left: 160px
+      margin-top: 35px
+
+  & .item:not(.active):not(:hover)
+    & .thumbnail
+      filter: grayscale(60%)
+
+    & .play-button
+      opacity: .5
+
+    & p
+      color: var(--lightGray)
 
 #index .pricing
   display: flex
