@@ -3,6 +3,7 @@ footer
     li: a(href="/faq") FAQ
     li: a(href="/api-docs") API Docs
     li: a(href="mailto:contact@typewriter.cloud") Contact
+    li.logo-twitter: a(href="https://twitter.com/typewritersoft", target="_blank") &nbsp;
   .fine-print
     ul
       li
